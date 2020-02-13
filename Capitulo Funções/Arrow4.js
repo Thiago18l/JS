@@ -1,0 +1,28 @@
+// Arrow Functions [ Aula 04]
+// Funções anonimas
+
+const soma = function (x,y) {
+    return x+y
+}
+
+const imprimir = function (a, b, operacao = soma){
+    console.log(operacao(a,b))
+}
+imprimir(3, 4)
+imprimir(3, 4, soma)
+imprimir(3, 4, function (x, y) {
+    return x-y
+})
+imprimir(3, 4, (x, y) => x * y)
+    const pessoa = {
+        falar: function(){
+            console.log('Opa')
+        },
+        falar2(){
+            console.log('Opa do Falar 2') // faz a mesma coisa do function
+        }
+    }
+
+    pessoa.falar()
+    pessoa.falar2()
+
