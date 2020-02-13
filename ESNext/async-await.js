@@ -31,7 +31,7 @@ console.log(somarRandomAsyncNums())
 
 // Good way to code Promise code
 
-const somarRandomAsyncNums2 = async() => {
+const somarRandomAsyncNums2 = async() => { // cria assincronismo
     const first =  await random()
     const second = await random()
     const third = await random()
