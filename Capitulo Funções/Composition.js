@@ -1,10 +1,11 @@
 // high order 
 
-function composition (fn1, fn2, fn3) {
+function composition (...fns) {
     return function(valor) {
-       return fn3(fn2(fn1(valor)))
+       return fns.reduce((acumulador, fn) => {
+            return fn(acumulador)
+       }, valor)
     }
-    
 }
 
 function gritar(text) {
